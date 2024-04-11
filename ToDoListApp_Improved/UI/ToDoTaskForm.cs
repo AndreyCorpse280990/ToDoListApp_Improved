@@ -21,9 +21,10 @@ namespace ToDoListApp_Improved.UI
         public ToDoTaskForm()
         {
             InitializeComponent();
-            toDoTask = null;
+            toDoTask = new ToDoTask(); // Инициализация toDoTask
             priorityComboBox.SelectedIndex = 0;
         }
+
 
         // Конструктор для редактирования задачи
         public ToDoTaskForm(ToDoTask task) : this()
@@ -43,16 +44,20 @@ namespace ToDoListApp_Improved.UI
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            // Обновляем существующую задачу
-            toDoTask.Title = titleTextBox.Text;
-            toDoTask.Description = descriptionTextBox.Text;
-            toDoTask.Priority = Convert.ToInt32(priorityComboBox.Text);
-            toDoTask.IsCompleted = isCompletedCheckBox.Checked;
+            ToDoTask updatedTask = new ToDoTask()
+            {
+                Title = titleTextBox.Text,
+                Description = descriptionTextBox.Text,
+                Priority = Convert.ToInt32(priorityComboBox.Text),
+                IsCompleted = isCompletedCheckBox.Checked
+            };
 
-            TaskUpdated?.Invoke(this, toDoTask);
+            // Вызываю событие TaskUpdated и передаю новый объект задачи
+            TaskUpdated?.Invoke(this, updatedTask);
 
             Close();
         }
+
 
     }
 }

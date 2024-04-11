@@ -70,12 +70,14 @@ namespace ToDoListApp_Improved.UI
         {
             if (toDoTaskListBox.SelectedItem != null)
             {
+                // Получаю выбранную задачу из списка
                 ToDoTaskListView selectedTaskView = (ToDoTaskListView)toDoTaskListBox.SelectedItem;
 
                 string taskTitle = selectedTaskView.ToDoTask.Title;
 
                 try
                 {
+                    // Удаляю задачу из хранилища
                     _storage.RemoveByTitle(taskTitle);
                     ViewToDoTaskList();
                 }
@@ -122,8 +124,9 @@ namespace ToDoListApp_Improved.UI
         {
             try
             {
-                // Обновляю задачу в хранилище по заголовку
-                _storage.UpdateByTitle(updatedTask.Title, updatedTask);
+                ToDoTaskListView selectedTaskView = (ToDoTaskListView)toDoTaskListBox.SelectedItem;
+                // Обновляю задачу в хранилище по исходному заголовку
+                _storage.UpdateByTitle(selectedTaskView.ToDoTask.Title, updatedTask);
                 // Обновляю список задач
                 ViewToDoTaskList();
             }
@@ -132,7 +135,5 @@ namespace ToDoListApp_Improved.UI
                 MessageBox.Show($"Ошибка при обновлении задачи: {ex.Message}");
             }
         }
-
-
     }
 }
