@@ -52,7 +52,16 @@ namespace ToDoListApp_Improved.Tasks
 
         public ToDoTask UpdateByTitle(string taskTitle, ToDoTask task)
         {
-            throw new NotImplementedException();
+            ToDoTask foundTask = _tasks.FirstOrDefault(t => t.Title == taskTitle);
+            if(foundTask != null)
+            {
+                // Обновляю поля найденной задачи
+                foundTask.Title = task.Title;
+                foundTask.Description = task.Description;
+                foundTask.Priority = task.Priority;
+                foundTask.IsCompleted = task.IsCompleted;
+            }
+            return foundTask;
         }
     }
 }

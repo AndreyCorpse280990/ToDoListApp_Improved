@@ -31,6 +31,7 @@
             this.toDoTaskListBox = new System.Windows.Forms.ListBox();
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.Edit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // toDoTaskListBox
@@ -70,11 +71,23 @@
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
+            // Edit_button
+            // 
+            this.Edit_button.Font = new System.Drawing.Font("Consolas", 20F);
+            this.Edit_button.Location = new System.Drawing.Point(204, 10);
+            this.Edit_button.Name = "Edit_button";
+            this.Edit_button.Size = new System.Drawing.Size(187, 46);
+            this.Edit_button.TabIndex = 3;
+            this.Edit_button.Text = "Изменить";
+            this.Edit_button.UseVisualStyleBackColor = true;
+            this.Edit_button.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.Edit_button);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.toDoTaskListBox);
@@ -90,6 +103,7 @@
         private System.Windows.Forms.ListBox toDoTaskListBox;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button Edit_button;
     }
 }
 

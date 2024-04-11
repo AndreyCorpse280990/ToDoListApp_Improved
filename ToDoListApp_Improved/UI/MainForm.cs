@@ -32,7 +32,7 @@ namespace ToDoListApp_Improved.UI
             // 2. записываем задачи в список
             for (int i = 0; i < tasks.Count; i++)
             {
-                toDoTaskListBox.Items.Add(new ToDoTaskListView(i+1, tasks[i]));
+                toDoTaskListBox.Items.Add(new ToDoTaskListView(i + 1, tasks[i]));
             }
         }
 
@@ -67,7 +67,7 @@ namespace ToDoListApp_Improved.UI
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
-        {           
+        {
             if (toDoTaskListBox.SelectedItem != null)
             {
                 ToDoTaskListView selectedTaskView = (ToDoTaskListView)toDoTaskListBox.SelectedItem;
@@ -89,5 +89,50 @@ namespace ToDoListApp_Improved.UI
                 MessageBox.Show("Выберите задачу для удаления.");
             }
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (toDoTaskListBox.SelectedItem != null)
+            {
+                // Получаю выбранную задачу из списка
+                ToDoTaskListView selectedTaskView = (ToDoTaskListView)toDoTaskListBox.SelectedItem;
+                ToDoTask selectedTask = selectedTaskView.ToDoTask;
+
+                try
+                {
+                    // Создаю форму для редактирования задачи и передаю выбранную задачу
+                    ToDoTaskForm editForm = new ToDoTaskForm(selectedTask);
+                    // Подписываемся на событие обновления задачи после редактирования
+                    editForm.TaskUpdated += EditForm_TaskUpdated;
+                    editForm.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при редактировании задачи: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Выберите задачу для редактирования.");
+            }
+        }
+
+        // Метод, вызываемый после редактирования задачи в форме редактирования
+        private void EditForm_TaskUpdated(object sender, ToDoTask updatedTask)
+        {
+            try
+            {
+                // Обновляю задачу в хранилище по заголовку
+                _storage.UpdateByTitle(updatedTask.Title, updatedTask);
+                // Обновляю список задач
+                ViewToDoTaskList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при обновлении задачи: {ex.Message}");
+            }
+        }
+
+
     }
 }

@@ -43,9 +43,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 40);
+            this.label1.Size = new System.Drawing.Size(164, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Заголовок:";
             // 
@@ -53,9 +54,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(29, 59);
+            this.label2.Location = new System.Drawing.Point(22, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 40);
+            this.label2.Size = new System.Drawing.Size(149, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Описание:";
             // 
@@ -63,26 +65,29 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(12, 109);
+            this.label3.Location = new System.Drawing.Point(9, 89);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 40);
+            this.label3.Size = new System.Drawing.Size(164, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Приоритет:";
             // 
             // titleTextBox
             // 
             this.titleTextBox.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleTextBox.Location = new System.Drawing.Point(223, 12);
+            this.titleTextBox.Location = new System.Drawing.Point(167, 10);
+            this.titleTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(569, 47);
+            this.titleTextBox.Size = new System.Drawing.Size(428, 39);
             this.titleTextBox.TabIndex = 4;
             // 
             // descriptionTextBox
             // 
             this.descriptionTextBox.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionTextBox.Location = new System.Drawing.Point(225, 65);
+            this.descriptionTextBox.Location = new System.Drawing.Point(169, 53);
+            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(569, 47);
+            this.descriptionTextBox.Size = new System.Drawing.Size(428, 39);
             this.descriptionTextBox.TabIndex = 5;
             // 
             // priorityComboBox
@@ -96,19 +101,21 @@
             "3",
             "4",
             "5"});
-            this.priorityComboBox.Location = new System.Drawing.Point(225, 118);
+            this.priorityComboBox.Location = new System.Drawing.Point(169, 96);
+            this.priorityComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priorityComboBox.Name = "priorityComboBox";
-            this.priorityComboBox.Size = new System.Drawing.Size(569, 46);
+            this.priorityComboBox.Size = new System.Drawing.Size(428, 40);
             this.priorityComboBox.TabIndex = 6;
             // 
             // isCompletedCheckBox
             // 
             this.isCompletedCheckBox.AutoSize = true;
             this.isCompletedCheckBox.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.isCompletedCheckBox.Location = new System.Drawing.Point(12, 170);
+            this.isCompletedCheckBox.Location = new System.Drawing.Point(9, 138);
+            this.isCompletedCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.isCompletedCheckBox.Name = "isCompletedCheckBox";
             this.isCompletedCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.isCompletedCheckBox.Size = new System.Drawing.Size(229, 44);
+            this.isCompletedCheckBox.Size = new System.Drawing.Size(183, 36);
             this.isCompletedCheckBox.TabIndex = 7;
             this.isCompletedCheckBox.Text = ":Завершено";
             this.isCompletedCheckBox.UseVisualStyleBackColor = true;
@@ -116,9 +123,10 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveButton.Location = new System.Drawing.Point(25, 236);
+            this.saveButton.Location = new System.Drawing.Point(19, 192);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(350, 63);
+            this.saveButton.Size = new System.Drawing.Size(262, 51);
             this.saveButton.TabIndex = 8;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -127,9 +135,10 @@
             // cancelButton
             // 
             this.cancelButton.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cancelButton.Location = new System.Drawing.Point(438, 236);
+            this.cancelButton.Location = new System.Drawing.Point(328, 192);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(350, 63);
+            this.cancelButton.Size = new System.Drawing.Size(262, 51);
             this.cancelButton.TabIndex = 9;
             this.cancelButton.Text = "Отменить";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -137,9 +146,9 @@
             // 
             // ToDoTaskForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 331);
+            this.ClientSize = new System.Drawing.Size(600, 269);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.isCompletedCheckBox);
@@ -149,6 +158,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ToDoTaskForm";
             this.Text = "Форма для элемента списка дел";
             this.ResumeLayout(false);
